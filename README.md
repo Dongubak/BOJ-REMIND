@@ -29,7 +29,12 @@
 | 10830 | 행렬제곱 |Gold 4 | linear Algebra, divconq | 분할정복, 행렬의 0제곱 단위행렬, 곱셈과 다르게 `(i - 1) / 2`를 안하고 홀수인 경우에 그냥 A한번더 곱해줌 |
 | 11444 | 피보나치수 6 |Gold 2 | linear Algebra, divconq, matrix | 피보나치 수열 N의 크기가 매우 큰 경우 효율적으로 계산하기 위한 행렬 제곱계산 M = ((1, 1), (1, 0)), M^n =((f(n + 1), f(n)), (f(n), f(n - 1))|
 | 1780 | 종이의 개수 |Silver 2 | divconq | 실수한 부분 : 주어진 행렬을 9개씩 분할하는 경우 한변의 길이는 1/3씩 줄어야 함|
+| 1753 | 최단경로 |Gold 4 | dijkstra | previous sht와 current sht가 서로 다른 경우 중복된 연산을 방지할 수 있음|
+| 1238 | 파티 |Gold 3 | dijkstra | 모든 정점에 대해서 sht를 작성한 뒤 각 정점에 대해서 K까지의 거리와 정점에서 K까지의 거리 합의 최댓값을 구하는 문제|
 
 
 # 기하학, 정수론
 https://github.com/Dongubak/DataStructureAndAlgorithm/tree/main/%EA%B8%B0%ED%95%98%ED%95%99
+
+# 다익스트라, 벨만포드, 코사라주
+https://github.com/Dongubak/DataStructureAndAlgorithm/tree/main/%EA%B7%B8%EB%9E%98%ED%94%84%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
