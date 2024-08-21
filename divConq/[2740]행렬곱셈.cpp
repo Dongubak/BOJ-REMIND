@@ -2,6 +2,19 @@
 
 using namespace std;
 
+vector<vector<int>> mul(vector<vector<int>> &A, vector<vector<int>> &B) {
+   int ar = A.size(), ac = A[0].size(), br = B.size(), bc = B[0].size();
+   vector<vector<int>> ans(ar, vector<int>(bc));
+
+   for(int i = 0; i < ar; i++) {
+      for(int j = 0; j < bc; j++) {
+         int res = 0;
+         for(int k = 0; k < ac; k++) res += A[i][k] * B[k][j];
+         ans[i][j] = res;
+      }
+   }
+}
+
 int main(void) {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
