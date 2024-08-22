@@ -31,7 +31,8 @@
 | 1780 | 종이의 개수 |Silver 2 | divconq | 실수한 부분 : 주어진 행렬을 9개씩 분할하는 경우 한변의 길이는 1/3씩 줄어야 함|
 | 1753 | 최단경로 |Gold 4 | dijkstra | previous sht와 current sht가 서로 다른 경우 중복된 연산을 방지할 수 있음|
 | 1238 | 파티 |Gold 3 | dijkstra | 모든 정점에 대해서 sht를 작성한 뒤 각 정점에 대해서 K까지의 거리와 정점에서 K까지의 거리 합의 최댓값을 구하는 문제|
-
+| 12015 | 가장 긴 증가하는 부분수열 2 |gold 2 | binarySearch | dp배열의 마지막 원소보다 큰 경우 dp배열에 추가하며 아닌 경우 이분탐색으로 적절한 원소의 위치를 찾아 수정함(가장 긴 부분수열의 길이만 구할 수 있음)|
+| 1219 | 오민식의 고민 |platinum 5 | dijkstra, BellmanFord, BFS | 다익스트라 알고리즘을 통해 longestpath를 구한 뒤 Bellmanford를 통해 longest path를 w값을 이용하여 업데이트하며. 이때 양수 가중치 사이클을 검사하고 사이클이 발생한 정점들에 대해서 기록한다. 각각의 정점들에서 BFS탐색을 통해 도착정점으로의 경로가 존재하면 양수 가중치 사이클이 존재하는 것이다.|
 
 # 기하학, 정수론
 https://github.com/Dongubak/DataStructureAndAlgorithm/tree/main/%EA%B8%B0%ED%95%98%ED%95%99
