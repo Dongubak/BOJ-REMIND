@@ -1,62 +1,83 @@
-// #include <bits/stdc++.h>
-
-// using namespace std;
-
-// string A, B;
-
-// int main(void) {
-//    ios_base::sync_with_stdio(false);
-//    cin.tie(0);
-
-//    cin >> A >> B;
-
-//    vector<int> f(B.size(), 0);
-
-//    int j = 0;
-
-//    for(int i = 1; i < B.size(); i++) {
-//       while(j > 0 && B[i] != B[j]) j = f[j - 1];
-   
-//       if(B[i] == B[j]) j++;
-      
-//       f[i] = j;
-//    }
-
-//    j = 0;
-   
-//    for(int i = 0; i < A.size(); i++) {
-//       while(j > 0 && A[i] != B[j]) j = f[j - 1];
-      
-//       if(A[i] == B[j]) j++;
-      
-
-//       if(j == B.size()) {
-//          // 패턴 B를 찾은 경우
-//          cout << 1;
-//          return 0;
-//       }
-//    }
-
-//    // 패턴 B를 찾지 못한 경우
-//    cout << 0;
-
-//    return 0;
-// }
-
 #include <bits/stdc++.h>
-
 using namespace std;
+
+int V, E, st, dst;
+vector<vector<pair<int, int>>> g;
+int sht[100 + 1][2];
+
+void mins() {
+   for(int i = 1; i <= V; i++) sht[i][0] = INT_MIN;
+   sht[st][0] = 0;
+
+   for(int _ = 0; _ < V - 1; _++) { /// V - 1번 진행
+      for(int i = 1; i <= V; i++) {
+         if(sht[i][0] == INT_MIN) continue;
+         for(auto& [d, w]: g[i])
+            if(sht[d][0] < sht[i][0] + w) sht[d][0] = sht[i][0] + w, sht[d][1] = i;
+      }
+   }
+
+   queue<int> q;
+
+   for(int i = 1; i <= V; i++) {
+      if(sht[i][0] == INT_MIN) continue;
+      for(auto& [d, w]: g[i]) 
+         if(sht[d][0] < sht[i][0] + w) q.push(d);
+   }
+
+
+   vector<int> vis(V + 1, 0);
+
+   while(!q.empty()) {
+      int cur = q.front(); q.pop();
+      for(auto& [d, w]: g[cur]) 
+         if(vis[d] == 0)
+            q.emplace(d), vis[d] = 1;
+   }
+
+   if(vis[dst]) {
+      cout << -1;
+      return;
+   }
+
+   vector<int> path;
+   int cur = dst;
+   while(cur != st) {
+      path.push_back(cur);
+      cur = sht[cur][1];
+   }
+   path.push_back(st);
+   reverse(path.begin(), path.end());
+
+   for(int i : path) cout << i << " ";
+
+   // vector<int> vis(V + 1, 0);
+
+   // while(!q.empty()) {
+   //    int cur = q.front(); q.pop();
+   //    for(auto& [d, w]: g[cur]) 
+   //       if(vis[d] == 0)
+   //          q.emplace(d), vis[d] = 1;
+   // }
+
+   // if(vis[dst]) cout << "-1";
+   // else trace(dst, sht);
+}
+
 
 int main(void) {
    ios_base::sync_with_stdio(false);
    cin.tie(NULL);
 
-   string A, B; int T;
+   cin >> V >> E, st = 1, dst = V;
 
-   while(cin >> B >> A) {
-      if(strstr(&A[0], &B[0]) != NULL) cout << "YES" << '\n';
-      else cout << "NO" << '\n';
-   }
+   int s, d, w;
+   g.resize(V + 1, vector<pair<int, int>>());
+
+   for(int i = 0; i < E; i++)
+      cin >> s >> d >> w, g[s].emplace_back(d, w);
+
+   mins();
 
    return 0;
 }
