@@ -33,7 +33,8 @@
 | 1238 | 파티 |Gold 3 | dijkstra | 모든 정점에 대해서 sht를 작성한 뒤 각 정점에 대해서 K까지의 거리와 정점에서 K까지의 거리 합의 최댓값을 구하는 문제|
 | 12015 | 가장 긴 증가하는 부분수열 2 |gold 2 | binarySearch | dp배열의 마지막 원소보다 큰 경우 dp배열에 추가하며 아닌 경우 이분탐색으로 적절한 원소의 위치를 찾아 수정함(가장 긴 부분수열의 길이만 구할 수 있음)|
 | 1219 | 오민식의 고민 |platinum 5 | dijkstra, BellmanFord, BFS | 다익스트라 알고리즘을 통해 longestpath를 구한 뒤 Bellmanford를 통해 longest path를 w값을 이용하여 업데이트하며. 이때 양수 가중치 사이클을 검사하고 사이클이 발생한 정점들에 대해서 기록한다. 각각의 정점들에서 BFS탐색을 통해 도착정점으로의 경로가 존재하면 양수 가중치 사이클이 존재하는 것이다.|
-
+| 1920 | 수 찾기 |silver 4 | 이분탐색 기초 문제, 정렬된 배열에 대해서 이분탐색 가능함(monotonous)|
+| 16916 | 부분문자열 |Bronze 2 | 문제의 난이도 상 Bruteforce로 풀린다. 하지만 부분문자열을 O(|s| * |p|)가 아닌 O(|s| + |p|)로 찾을 수 있는 KMP 알고리즘을 사용할 수 있다. 실패함수로 failure array를 작성한 뒤 접두사와 접미사가 같은 최대 길이를 통해 연산을 줄인다.|
 # 기하학, 정수론
 https://github.com/Dongubak/DataStructureAndAlgorithm/tree/main/%EA%B8%B0%ED%95%98%ED%95%99
 
