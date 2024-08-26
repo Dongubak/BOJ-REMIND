@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-         if(sht[d][0] < sht[i][0] + w) q.push(d);
 
 using namespace std;
 
