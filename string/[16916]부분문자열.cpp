@@ -42,21 +42,3 @@ int main(void) {
 
    return 0;
 }
-
-#include <bits/stdc++.h>
-
-using namespace std;
-
-int main(void) {
-   ios_base::sync_with_stdio(false);
-   cin.tie(NULL);
-
-   string A, B; int T;
-
-   while(cin >> B >> A) {
-      if(strstr(&A[0], &B[0]) != NULL) cout << "YES" << '\n';
-      else cout << "NO" << '\n';
-   }
-
-   return 0;
-}
