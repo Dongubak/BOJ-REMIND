@@ -21,6 +21,8 @@
 | 1219 | 오민식의 고민 |platinum 5 | dijkstra, BellmanFord, BFS | 다익스트라 알고리즘을 통해 longestpath를 구한 뒤 Bellmanford를 통해 longest path를 w값을 이용하여 업데이트하며. 이때 양수 가중치 사이클을 검사하고 사이클이 발생한 정점들에 대해서 기록한다. 각각의 정점들에서 BFS탐색을 통해 도착정점으로의 경로가 존재하면 양수 가중치 사이클이 존재하는 것이다.|
 | 12015 | 가장 긴 증가하는 부분수열 2 |gold 2 | binarySearch | dp배열의 마지막 원소보다 큰 경우 dp배열에 추가하며 아닌 경우 이분탐색으로 적절한 원소의 위치를 찾아 수정함(가장 긴 부분수열의 길이만 구할 수 있음)|
 | 1920 | 수 찾기 |silver 4 | binarySearch | 이분탐색 기초 문제, 정렬된 배열에 대해서 이분탐색 가능함(monotonous)|
+| 16401| 과자나눠주기 |silver 2 | binarySearch | 이분탐색, mid를 통해 lower_bound를 구함 |
+| 1920 | 수 찾기 |silver 4 | binarySearch | 이분탐색 기초 문제, 정렬된 배열에 대해서 이분탐색 가능함(monotonous)|
 | 11660 | 구간합 구하기 5 |Silver 1 | prefix sum | 2차원 행렬에서의 각 행에 대한 구간 합을 구함 dp풀이는 아직 시기 상조인 듯|
 | 1018 | 체스판 다시 칠하기 |Silver 4 | prefix sum | 나중에 풀이|
 | 1026 | 보물 |Silver 4 | sort | 두 배열의 0부터 끝까지 원소들의 곱의 합이 최소가 되도록 하는 조건|
