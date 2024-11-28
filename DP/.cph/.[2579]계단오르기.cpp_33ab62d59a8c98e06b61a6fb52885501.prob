@@ -1,0 +1,1 @@
+{"name":"Local: [2579]계단오르기","url":"/Users/khj/Documents/GitHub/BOJ-REMIND/DP/[2579]계단오르기.cpp","tests":[{"id":1732109580493,"input":"6\n10\n20\n15\n25\n10\n20","output":"75"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/khj/Documents/GitHub/BOJ-REMIND/DP/[2579]계단오르기.cpp","group":"local","local":true}
