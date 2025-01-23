@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+#define LIM 1000006
+using namespace std;
+
+int n;
+
+int cards[100001];
+int res[LIM];
+int numbers[LIM];
+
+int main(void) {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    cin >> n;
+
+    for(int i = 0; i < n; i++) {
+        cin >> cards[i];
+        numbers[cards[i]] = 1;
+    }
+
+    for(int i = 0; i < n; i++) {
+        int cv = cards[i];
+
+        for(int j = 2; j * cv <= LIM; j++)
+            if(numbers[j * cv] == 1) /// 배수가 존재함
+                res[j * cv] -= 1, res[cv] += 1;
+    }
+        
+    for(int i = 0; i < n; i++) {
+        cout << res[cards[i]] << " ";
+    }
+    
+
+    return 0;
+}
