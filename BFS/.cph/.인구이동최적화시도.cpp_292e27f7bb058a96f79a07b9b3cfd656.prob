@@ -1,0 +1,1 @@
+{"name":"Local: 인구이동최적화시도","url":"/Users/khj/Documents/GitHub/BOJ-REMIND/BFS/인구이동최적화시도.cpp","tests":[{"id":1738728363720,"input":"2 20 50\n50 30\n20 40","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/khj/Documents/GitHub/BOJ-REMIND/BFS/인구이동최적화시도.cpp","group":"local","local":true}

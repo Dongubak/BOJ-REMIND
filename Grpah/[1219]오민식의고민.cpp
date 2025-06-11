@@ -76,5 +76,11 @@ int main(void) {
 
    minsika();
 
+   vector<vector<int>> A(10, vector<int>(8, 0));
+
+   vector<vector<int>> B(10, vector<int>());
+
+   vector<vector<vector<int>>> C(10, vector<vector<int>>(8, vector<int>(5)));
+
    return 0;
 }

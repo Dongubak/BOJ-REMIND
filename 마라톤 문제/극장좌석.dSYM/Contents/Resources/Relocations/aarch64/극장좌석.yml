@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/khj/Documents/GitHub/BOJ-REMIND/마라톤 문제/극장좌석"
+relocations:     []
+...

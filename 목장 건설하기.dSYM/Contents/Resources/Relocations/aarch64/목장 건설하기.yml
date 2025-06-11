@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "목장 건설하기"
+relocations:     []
+...
