@@ -20,8 +20,6 @@ int notOver(int r, int c)
 
 int main(void)
 {
-  ios_base::sync_with_stdio(false);
-  cin.tie(NULL);
   bool sflag = false;
   cin >> R >> C >> T;
   for (int i = 0; i < R; i++)
@@ -144,30 +142,29 @@ int main(void)
       mat[r - 1][C - 1] = 0;
     }
 
-    for (int c = C, r = rs1; c > 1; c--)
+    for (int c = C - 1, r = rs1; c > 1; c--)
     {
       /// r = rs1
       mat[r][c] = mat[r][c - 1];
       mat[r][c - 1] = 0;
     }
 
-    for (int c = C, r = rs2; c > 1; c--)
+    for (int c = C - 1, r = rs2; c > 1; c--)
     {
       /// r = rs2
       mat[r][c] = mat[r][c - 1];
       mat[r][c - 1] = 0;
     }
+    // for (int i = 0; i < R; i++)
+    // {
+    //   for (int j = 0; j < C; j++)
+    //   {
+    //     cout << mat[i][j] << " ";
+    //   }
+    //   cout << '\n';
+    // }
+    // cout << '\n';
   }
-
-  // for (int i = 0; i < R; i++)
-  // {
-  //   for (int j = 0; j < C; j++)
-  //   {
-  //     cout << mat[i][j] << " ";
-  //   }
-  //   cout << '\n';
-  // }
-  // cout << '\n';
 
   int sum = 0;
 
