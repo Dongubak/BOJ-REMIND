@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/khj/Documents/GitHub/BOJ-REMIND/DP/main.bin'
+relocations:     []
+...
